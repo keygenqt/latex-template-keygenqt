@@ -1,0 +1,45 @@
+\RequirePackage{tikz}\mode<presentation>
+
+\definecolor{color_top} {HTML}{5e42ff}
+\definecolor{color_bottom} {HTML}{aa82ff}
+\definecolor{color_bg} {HTML}{f8faff}
+
+\setbeamertemplate{background}{
+    \begin{tikzpicture}
+        \fill[color=color_bg] rectangle (\the\paperwidth,\the\paperheight);
+    \end{tikzpicture}
+}
+
+% Title page
+\defbeamertemplate*{title page}{keygenqt}[1][]
+{
+    \begin{tikzpicture}[remember picture,overlay]
+        \node [
+            shading = axis,
+            rectangle,
+            left color=color_top,
+            right color=color_top!40!color_bottom,
+            shading angle=30,
+            anchor=north,
+            minimum width=\paperwidth,
+            minimum height=\paperheight
+        ] (box) at (current page.north){};
+    \end{tikzpicture}
+
+    \vskip1cm%
+    %% "title page header"  defines the loaded colors.
+    \begin{beamercolorbox}[center,sep=8pt,#1]{title page header}
+        \usebeamerfont{title}\Huge\inserttitle\par%
+    \end{beamercolorbox}%
+    \vskip2cm%
+    \begin{beamercolorbox}[center,sep=8pt,#1]{author}
+        \usebeamerfont{author}\textcolor{white}{\insertauthor}%
+    \end{beamercolorbox}
+    \begin{beamercolorbox}[center,sep=8pt,#1]{date}
+        \usebeamerfont{author}\textcolor{white}{\insertdate}%
+    \end{beamercolorbox}
+    \vfill
+}
+
+\mode
+<all>

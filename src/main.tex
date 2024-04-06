@@ -1,0 +1,37 @@
+%! Author = keygenqt
+%! Date = 4/6/24
+
+% Preamble
+\documentclass{beamer}
+\usepackage{blkarray}
+\usetheme{keygenqt}
+
+% Settings
+\setbeamertemplate{blocks}[rounded][shadow=false]
+
+% Document
+\begin{document}
+    \title{Hello LaTeX}
+    \author{Vitaly Zarubin}
+
+    \begin{frame}
+        \titlepage
+    \end{frame}
+
+    % Blocks frame
+    \section{Blocks in Beamer}\label{sec:blocks-in-beamer}
+    \begin{frame}{Blocks in Beamer}
+        \begin{block}{Standard Block}
+            This is a standard block.
+        \end{block}
+        \vskip0.35cm%
+        \begin{alertblock}{Alert Message}
+            This block presents alert message.
+        \end{alertblock}
+        \vskip0.35cm%
+        \begin{exampleblock}{An example of typesetting tool}
+            Example: MS Word, \LaTeX{}
+        \end{exampleblock}
+    \end{frame}
+
+\end{document}
