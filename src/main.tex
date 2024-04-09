@@ -1,13 +1,19 @@
+%! suppress = FileNotFound
 %! Author = keygenqt
 %! Date = 4/6/24
 
 % Preamble
 \documentclass{beamer}
 \usepackage{blkarray}
+\usepackage{tcolorbox}
+\usepackage{multicol}
+
+% Add theme
 \usetheme{keygenqt}
 
-% Settings
-\setbeamertemplate{blocks}[rounded][shadow=false]
+% Includes
+\input{mybox}
+\input{mycolors}
 
 % Document
 \begin{document}
@@ -20,18 +26,48 @@
 
     % Blocks frame
     \section{Blocks in Beamer}\label{sec:blocks-in-beamer}
-    \begin{frame}{Blocks in Beamer}
-        \begin{block}{Standard Block}
-            This is a standard block.
-        \end{block}
-        \vskip0.35cm%
-        \begin{alertblock}{Alert Message}
-            This block presents alert message.
-        \end{alertblock}
-        \vskip0.35cm%
-        \begin{exampleblock}{An example of typesetting tool}
-            Example: MS Word, \LaTeX{}
-        \end{exampleblock}
+    \begin{frame}{tColorBox in Beamer}
+        \begin{multicols}{2}
+
+            Info about section 1
+
+            \begin{mybox}
+                This is box Default.
+                \tcblower
+                Content box part.
+                Content box part.
+                Content box part.
+            \end{mybox}
+
+            \begin{myboxinfo}
+                This is box Info.
+            \end{myboxinfo}
+
+            \begin{myboxsuccess}
+                This is box Info.
+            \end{myboxsuccess}
+
+            \columnbreak
+
+            Info about section 2
+
+            \begin{myboxwarning}
+                This is box Info.
+            \end{myboxwarning}
+
+            \begin{myboxerror}
+                This is box Info.
+            \end{myboxerror}
+
+            \begin{myboxprimary}
+                This is box Primary.
+                \tcblower
+                Content box part.
+                Content box part.
+                Content box part.
+            \end{myboxprimary}
+
+        \end{multicols}
     \end{frame}
 
 \end{document}

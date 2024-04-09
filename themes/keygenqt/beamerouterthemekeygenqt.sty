@@ -1,7 +1,8 @@
 \RequirePackage{tikz}\mode<presentation>
 
-\definecolor{color_top} {HTML}{5e42ff}
-\definecolor{color_bottom} {HTML}{aa82ff}
+% Includes
+%! suppress = FileNotFound
+\input{mycolors}
 
 % Frame title
 \defbeamertemplate*{frametitle}{texsx}[1][]
@@ -9,14 +10,14 @@
     \vskip1cm%
     \begin{beamercolorbox}[wd=\paperwidth,ht=1.2cm]{frametitle}
         \begin{tikzpicture}
-            \useasboundingbox[fill=white](0,0) rectangle(\the\paperwidth,1.2);
-            \fill[color_bottom] (0,0) rectangle(2.95,1.2);
-            \fill[color_top] (3.05,0) rectangle(\the\paperwidth,1.2);
+            \useasboundingbox[fill=color_bg](0,0) rectangle(\the\paperwidth,1.2);
+            \filldraw[color_secondary, rounded corners=4pt] (-4,0) rectangle (2.2,1.2) {} ;
+            \filldraw[color_primary, rounded corners=4pt] (2.4,0) rectangle (\the\paperwidth + 4,1.2) {} ;
             \ifx\insertframesubtitle\@empty%
-            {\node[anchor=west, white,font=\large] at (3.2,0.61){\insertframetitle};}
+            {\node[anchor=west, white,font=\large] at (3,0.61){\insertframetitle};}
             \else%
-            {\node[anchor= west, white,font=\large] at (3.2,0.81){\insertframetitle};%
-            \node[anchor= west, white,font=\small] at (3.2,0.41){\insertframesubtitle};}%
+            {\node[anchor= west, white,font=\large] at (3,0.81){\insertframetitle};%
+            \node[anchor= west, white,font=\small] at (3,0.41){\insertframesubtitle};}%
             \fi
         \end{tikzpicture}
     \end{beamercolorbox}

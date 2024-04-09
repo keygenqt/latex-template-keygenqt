@@ -8,12 +8,12 @@ Presentation template for LaTeX with custom theme.
 Environment variables for connect theme:
 
 ```
-TEXINPUTS=$PWD/../themes/keygenqt//:
+TEXINPUTS=$PWD/../themes/keygenqt//:\;$PWD/../themes/components//:
 ```
 
 #### Preview
 
-![preview.png](data/preview.png)
+![preview_2.png](data/preview_2.png)
 
 ### License
 

@@ -1,8 +1,8 @@
 \RequirePackage{tikz}\mode<presentation>
 
-\definecolor{color_top} {HTML}{5e42ff}
-\definecolor{color_bottom} {HTML}{aa82ff}
-\definecolor{color_bg} {HTML}{f8faff}
+% Includes
+%! suppress = FileNotFound
+\input{mycolors}
 
 \setbeamertemplate{background}{
     \begin{tikzpicture}
@@ -17,8 +17,8 @@
         \node [
             shading = axis,
             rectangle,
-            left color=color_top,
-            right color=color_top!40!color_bottom,
+            left color=color_primary,
+            right color=color_primary!40!color_secondary,
             shading angle=30,
             anchor=north,
             minimum width=\paperwidth,

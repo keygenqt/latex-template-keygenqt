@@ -1,0 +1,101 @@
+%! Author = keygenqt
+%! Date = 4/6/24
+
+% Preamble
+\usepackage{tcolorbox}
+\usetikzlibrary{calc}
+
+% Includes
+%! suppress = FileNotFound
+\input{mycolors}
+
+% Boxes
+\tcbuselibrary{skins}
+\tcbuselibrary{fitting}
+
+\definecolor{color_primary} {HTML}{5e42ff}
+\definecolor{color_secondary} {HTML}{aa82ff}
+
+\newtcolorbox{mybox}[1][]{
+    enhanced,
+    colback=white,
+    colbacktitle=white,
+    segmentation code={\draw[gray!15]($(segmentation.west)$)--($(segmentation.east)$);},
+    colframe=gray!10,
+    boxrule=1pt,
+    titlerule=1pt,
+    fuzzy halo=1mm with white!85!gray,
+    arc=4pt,
+    fontupper=\normalsize,
+    fontlower=\scriptsize,
+    #1}
+
+\newtcolorbox{myboxprimary}[1][]{
+    enhanced,
+    colback=white,
+    colbacktitle=white,
+    segmentation code={\draw[color_primary!15]($(segmentation.west)$)--($(segmentation.east)$);},
+    colframe=color_primary!10,
+    boxrule=1pt,
+    titlerule=0pt,
+    fuzzy halo=1mm with white!85!color_primary,
+    arc=4pt,
+    fontupper=\normalsize,
+    fontlower=\scriptsize,
+    #1}
+
+\newtcolorbox{myboxinfo}[1][]{
+    enhanced,
+    colback=white,
+    colbacktitle=white,
+    segmentation code={\draw[blue!15]($(segmentation.west)$)--($(segmentation.east)$);},
+    colframe=blue!10,
+    boxrule=1pt,
+    titlerule=0pt,
+    fuzzy halo=1mm with white!85!blue,
+    arc=4pt,
+    fontupper=\normalsize,
+    fontlower=\scriptsize,
+    #1}
+
+\newtcolorbox{myboxsuccess}[1][]{
+    enhanced,
+    colback=white,
+    colbacktitle=white,
+    segmentation code={\draw[teal!15]($(segmentation.west)$)--($(segmentation.east)$);},
+    colframe=teal!10,
+    boxrule=1pt,
+    titlerule=0pt,
+    fuzzy halo=1mm with white!85!teal,
+    arc=4pt,
+    fontupper=\normalsize,
+    fontlower=\scriptsize,
+    #1}
+
+\newtcolorbox{myboxwarning}[1][]{
+    enhanced,
+    colback=white,
+    colbacktitle=white,
+    segmentation code={\draw[orange!15]($(segmentation.west)$)--($(segmentation.east)$);},
+    colframe=orange!10,
+    boxrule=1pt,
+    titlerule=0pt,
+    fuzzy halo=1mm with white!85!orange,
+    arc=4pt,
+    fontupper=\normalsize,
+    fontlower=\scriptsize,
+    #1}
+
+\newtcolorbox{myboxerror}[1][]{
+    enhanced,
+    colback=white,
+    colbacktitle=white,
+    segmentation code={\draw[purple!15]($(segmentation.west)$)--($(segmentation.east)$);},
+    colframe=purple!10,
+    boxrule=1pt,
+    titlerule=0pt,
+    fuzzy halo=1mm with white!85!purple,
+    arc=4pt,
+    fontupper=\normalsize,
+    fontlower=\scriptsize,
+    #1}
