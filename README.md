@@ -18,7 +18,7 @@ export TEXINPUTS=\
 
 #### Preview
 
-![preview_2.png](data/preview_2.png)
+![preview_2.png](data/preview.png)
 
 ### License
 
