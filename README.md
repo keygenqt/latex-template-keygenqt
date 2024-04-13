@@ -3,7 +3,9 @@ My LaTeX
 
 Presentation/article templates for LaTeX with custom theme.
 
-*In developing...*
+#### Preview
+
+![preview_2.png](data/preview.png)
 
 Environment variables for connect theme:
 
@@ -14,10 +16,6 @@ export TEXINPUTS=\
 ~/path/to/project/beamer/theme//:\;\
 ~/path/to/project/beamer/components//:
 ```
-
-#### Preview
-
-![preview_2.png](data/preview.png)
 
 ### License
 
