@@ -1,5 +1,6 @@
-# IDE
+# IDEs
 .idea
+.vscode
 
 # LaTex build
 out

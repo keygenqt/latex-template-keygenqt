@@ -1,0 +1,27 @@
+\makeatletter
+\renewcommand\maketitle{{\raggedright
+    \begin{tikzpicture}[remember picture,overlay]
+        \node [
+            shading = axis,
+            rectangle,
+            left color=color_primary,
+            right color=color_primary!40!color_secondary,
+            shading angle=30,
+            anchor=north,
+            minimum width=\paperwidth,
+            minimum height=\paperheight
+        ] (box) at (current page.north){};
+    \end{tikzpicture}
+    \vspace*{\fill}
+        \begin{center}
+            \textcolor{white}{\Huge \bfseries \sffamily \@title}\\[5ex]
+            \textcolor{white}{\Large \@author}\\[2ex]
+            \textcolor{white}{\@date}\\[11ex]
+        \end{center}
+    \vspace*{\fill}
+    \thispagestyle{empty}
+    \newpage
+    \clearpage
+    \setcounter{page}{1}
+}}
+\makeatother

@@ -1,36 +1,43 @@
-%! suppress = FileNotFound
-%! Author = keygenqt
-%! Date = 4/6/24
-
-% Preamble
 \documentclass{beamer}
+
+% Document
+\usepackage[english,russian]{babel}
+
+% Elements
 \usepackage{blkarray}
 \usepackage{tcolorbox}
 \usepackage{multicol}
 
 % Add theme
-\usetheme{keygenqt}
+\usetheme{mybeamer}
 
 % Includes
 \input{mybox}
 \input{mycolors}
 
-% Document
-\begin{document}
-    \title{Hello LaTeX}
-    \author{Vitaly Zarubin}
+% Description
+\author{Виталий Зарубин}
+\title{Презентация}
+\date{\today}
 
+% Start document
+\begin{document}
+
+    %% Title page
     \begin{frame}
         \titlepage
     \end{frame}
 
-    % Blocks frame
-    \section{Blocks in Beamer}\label{sec:blocks-in-beamer}
-    \begin{frame}{tColorBox in Beamer}
+    %% Frame with boxes
+    \begin{frame}{Boxes}
+
+        %% Columns page
         \begin{multicols}{2}
 
+            %% Title column 1
             Info about section 1
 
+            %% Default box with title
             \begin{mybox}
                 This is box Default.
                 \tcblower
@@ -39,26 +46,32 @@
                 Content box part.
             \end{mybox}
 
+            %% Info box
             \begin{myboxinfo}
                 This is box Info.
             \end{myboxinfo}
 
+            %% Success box
             \begin{myboxsuccess}
-                This is box Info.
+                This is box Success.
             \end{myboxsuccess}
 
             \columnbreak
 
+            %% Title column 2
             Info about section 2
 
+            %% Warning box
             \begin{myboxwarning}
-                This is box Info.
+                This is box Warning.
             \end{myboxwarning}
 
+            %% Error box
             \begin{myboxerror}
-                This is box Info.
+                This is box Error.
             \end{myboxerror}
 
+            %% Primary box
             \begin{myboxprimary}
                 This is box Primary.
                 \tcblower

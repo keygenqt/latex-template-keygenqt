@@ -1,4 +1,4 @@
-\documentclass[a4paper,12pt,titlepage]{article}
+\documentclass[a4paper,12pt]{article}
 
 % Document
 \usepackage[english,russian]{babel}
@@ -6,25 +6,32 @@
 
 % Elements
 \usepackage{tabularx}
+\usepackage{xcolor}
+\usepackage{tikz}
+
+% Add theme
+\input{myarticle}
+
+% Includes
+\input{mycolors}
 
 % Description
 \author{Виталий Зарубин}
 \title{Статья}
 \date{\today}
 
-% Start document
 \begin{document}
 
-%% Page title (article params = titlepage)
+    %% Page title with background
     \maketitle
 
-%% First section
+    %% First section
     \section{Section}
 
     Это вводный абзац в начале документа.
     Это вводный абзац в начале документа.
 
-%% Text custom format
+    %% Text custom format
     \begin{verbatim}
     \begin Это вводный абзац в начале документа.
     \end Это вводный абзац в начале документа.
@@ -38,7 +45,7 @@
     Это вводный абзац в начале документа.
     Это вводный абзац в начале документа.
 
-%% Center table
+    %% Center table
     \begin{center}
         \begin{tabular}{c r @{.} l}
             Выражение с $\pi$ &
@@ -62,7 +69,7 @@
     Это вводный абзац в начале документа.
     Это вводный абзац в начале документа.
 
-%% Float table with ref
+    %% Float table with ref
     \begin{table}[!ht]
         \begin{tabularx}{\textwidth}{|X|X|X|}
             \hline
@@ -78,7 +85,7 @@
     Это вводный абзац в начале документа.
     Это вводный абзац в начале документа.
 
-%% Sub first section
+    %% Sub first section
     \subsection{Subsection}
 
     This is new article text.
@@ -86,13 +93,13 @@
     Это вводный абзац в начале документа.
     Это вводный абзац в начале документа.
 
-%% Quote example
+    %% Quote example
     \begin{quote}
         Это вводный абзац в начале документа.
         Это вводный абзац в начале документа.
     \end{quote}
 
-%% Sub-sub first section
+    %% Sub-sub first section
     \subsubsection{Subsubsection}
 
     Это вводный абзац
@@ -100,12 +107,12 @@
         Текст сноски
     }
     в начале документа.
-%% Text selection
+    %% Text selection
     Это вводный \underline{абзац} в начале документа.
     Это вводный \emph{абзац} в начале документа.
     Это вводный \textsf{абзац} в начале документа.
 
-%% Second selection
+    %% Second selection
     \section{Конец}
 
     Это вводный абзац в начале документа.
@@ -113,7 +120,7 @@
     Это вводный абзац в начале документа.
     Это вводный абзац в начале документа.
 
-%% Lists example
+    %% Lists example
     \begin{enumerate}
         \item This is new article text.
         \begin{itemize}
@@ -128,7 +135,7 @@
     Это вводный абзац в начале документа.
     Это вводный абзац в начале документа.
 
-%% Table of contents
+    %% Table of contents
     \newpage
     \tableofcontents
 

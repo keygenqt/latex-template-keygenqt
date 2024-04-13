@@ -1,14 +1,19 @@
 My LaTeX
 ===================
 
-Presentation template for LaTeX with custom theme.
+Presentation/article templates for LaTeX with custom theme.
 
 *In developing...*
 
 Environment variables for connect theme:
 
 ```
-TEXINPUTS=$PWD/../themes/keygenqt//:\;$PWD/../themes/components//:
+export TEXINPUTS=\
+~/path/to/project/article/theme//:\;\
+~/path/to/project/article/components//:\
+~/path/to/project/beamer/theme//:\;\
+~/path/to/project/beamer/components//:
+
 ```
 
 #### Preview
