@@ -13,7 +13,6 @@ export TEXINPUTS=\
 ~/path/to/project/article/components//:\
 ~/path/to/project/beamer/theme//:\;\
 ~/path/to/project/beamer/components//:
-
 ```
 
 #### Preview
